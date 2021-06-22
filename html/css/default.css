@@ -2189,6 +2189,8 @@ input:checked + .slider:before {
 
   .modal_box .login_modal {background-color: #fff !important; position: relative; margin: 0 auto;}
   .modal_box .login_modal .login_modal_uline{margin-bottom:0;padding-bottom:20px;font-size:17px;}
+  .modal_box .n_modal {top:50%;width: calC(100% - 30px) !important; height:auto;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
+  
   .m_txt {display: block;}
   .m_txt {font-size: 16px; text-align: center; padding-top: 60px;}
   .login_txt {padding:0px 0 60px; font-size: 14px; text-align: center;}
