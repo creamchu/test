@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>상세내역</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="detail_modal">
+
+                <header class="mobile">
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>상세내역</h2>
+                    </div>
+                </header>
+
+                <h2>상세내역</h2>
+                <div>
+                    <div>
+                        <div class="tit">카드결제</div>
+                        <div class="stit">
+                            <p>가맹점</p>
+                            <p>가맹점명<b><img src="../image/icon_branch.png" alt="온라인"></b></p><!-- 2021-06 수정 -->
+                        </div>
+                    </div>
+                    <ul class="detail_list">
+                        <li>
+                            <p>결제일시</p>
+                            <p>2020.10.10 오전 10:10:23</p>
+                        </li>
+                        <li>
+                            <p>주문상품</p>
+                            <p>LG V50 휴대폰 메탈 케이스 블랙...</p>
+                        </li>
+                        <li>
+                            <p>결제수단</p>
+                            <p>카드사명 / 카드명</p>
+                        </li>
+                        <li>
+                            <p>승인번호</p>
+                            <p>123456789</p>
+                        </li>
+                        <li>
+                            <p>이용구분</p>
+                            <p>2개월 할부</p>
+                        </li>
+                        <li class="underline pdb40">
+                            <p>결제상태</p>
+                            <p class="point1">결제 취소</p>
+                        </li>
+                        <li class="amount point1 pdt40 pdb0">
+                            <p>금액</p>
+                            <p><em class="point1">56,000</em>원</p><!-- 20210415 "총" 삭제 -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- <a href="" class="b_org_big">확인</a> -->
+                <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal">닫기</button> <!-- 2021-06 수정 -->
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

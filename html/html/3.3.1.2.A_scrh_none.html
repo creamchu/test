@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/stickyfill.min.js"></script><!-- 20210323 추가 -->
+    <title>결제내역 조회</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+
+                <header id="sticky1" class="mo show pc_sticky1"><!-- 20210321 클래스 수정 -->
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>결제내역 조회</h2>
+                    </div>
+                </header>
+
+                <section class="settle_search pdlr_0"><!-- 20210524 클래스 수정 -->
+                    <article class="">
+                        <div class="tab pc_sticky2"><!-- 20210321 클래스 수정 -->
+                            <ul>
+                                <li><a href="javascript:;" class="on">LG 페이 간편결제 내역</a></li><!-- 20210415 LG 페이 띄어쓰기 수정 -->
+                                <li><a href="javascript:;">결제수단 별 이용내역</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="date">
+                            <div>
+                                <!-- 20210526 추가//-->
+                                <button type="button" class="date_prev"><span class="hidden">이전달</span></button><!-- 비활성화시 disabled 속성추가 -->
+                                <!-- //20210526 추가-->
+                                <!-- 20210526 삭제//
+                                <a href="">
+                                    <b><img src="../image/icon_date_pre.png"></b>
+                                </a>
+                                -->
+                                10월 이용내역
+                            </div>
+                            <div>
+                                <p class="">
+                                    <!-- 20210415 삭제//
+                                    <span>총 </span>
+                                    -->
+                                    <em>0</em><span>원</span>
+                                    <!-- 20210526 추가//-->
+                                    <button type="button" class="date_next" disabled><span class="hidden">다음달</span></button><!-- 비활성화시 disabled 속성추가 -->
+                                    <!-- //20210526 추가-->
+                                </p>
+                            </div>
+                        </div>
+                        <div class="used_no">이용내역이 없습니다.</div>
+                    </article>
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+            </div>
+        </div>
+    </div> <!-- 2021-06 수정 -->
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.8.1.js"></script> <!-- 2021-06-21 수정 -->
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>공지사항 및 마케팅 정보 수신</title> <!-- 2021-06 문구 수정 -->
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+
+                <header class="mo show po_retv">
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>공지사항 및 마케팅 정보 수신</h2> <!-- 2021-06 문구 수정 -->
+                    </div>
+                </header>
+
+                <section class="settle_search">
+                    <article class="notice mgb0">
+
+                        <ul>
+                            <li>
+                                <div>공지사항 수신</div>
+                                <!-- 2021-06 수정 -->
+                                <div class="switch_box">
+                                    <label class="switch blind" for="switch_1">공지사항 수신 여부</label>
+                                    <button role="switch" class="btn_switch" aria-pressed="true" aria-checked="true" id="switchNotice" aria-describedby="noticeStatus">수신 체크</button>
+                                    <span id="noticeStatus" class="blind" aria-live="assertive" aria-atomic="true">수신</span>
+                                    <input type="hidden" aria-hidden="true" value="수신">
+                                </div>
+                                <!-- //2021-06 수정 -->
+                            </li>
+                            <li>
+                                <p>긴급 공지, 약관 개정 정보 등 공지사항을 안내 받습니다.</p><!-- 2021-06 문구 수정 -->
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="notice notice_marketing mgt0">
+                        <ul>
+                            <li>
+                                <div>마케팅 정보 수신</div><!-- 2021-06 문구 수정 -->
+                                <!-- 2021-06 수정 -->
+                                <div class="switch_box">
+                                    <label class="switch blind" for="switch_2">마케팅 알림 수신 여부</label>
+                                    <button role="switch" class="btn_switch" aria-pressed="true" aria-checked="true" id="switchMaketing" aria-describedby="maketingStatus">수신 체크</button>
+                                    <span id="maketingStatus" class="blind" aria-live="assertive" aria-atomic="true">거부</span>
+                                    <input type="hidden" aria-hidden="true" value="거부">
+                                </div>
+                                <!-- //2021-06 수정 -->
+                            </li>
+                            <li>
+                                <p>서비스 관련 이벤트, 프로모션, 혜택 관련 정보를 제공 받습니다.</p><!-- 20210415 LG 페이 띄어쓰기 수정 --><!-- 2021-06 문구 수정 -->
+                            </li>
+                        </ul>
+                    </article>
+
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+            </div>
+        </div>
+    </div> <!-- 2021-06 수정 -->
+
+    <!-- 2021-06 추가 -->
+    <script>
+        var toggles = document.querySelectorAll( ".switch_box" );
+
+        for(i = 0, l = toggles.length; i < l; i++ ){ 
+        var tog = toggles[ i ];
+        tog.addEventListener( "click", function( e ) {
+            var el = this.querySelector( "button" ),
+                state = el.getAttribute( "aria-pressed" ) == "true",
+                val = state ? "거부" : "수신",
+                realInput = this.querySelector( "input" )
+
+                el.setAttribute( "aria-pressed", state ? "false" : "true" );
+                el.setAttribute( "aria-checked", state ? "false" : "true" );
+            
+                el.nextElementSibling.innerHTML = val;
+                realInput.value = val;
+
+            });
+            
+        }
+        
+        /* 2021-06-21 추가 */
+        $(function(){ 
+            
+            $(".btn_switch").on("click", function(){
+            
+                if($(this).is("#switchNotice")) {
+                    console.log($("#noticeStatus").attr( "aria-checked" ));
+
+                    if($(this).attr( "aria-checked" ) == "true"){
+                        $("#switchMaketing").attr("disabled", true);
+                        $("#maketingStatus").text("거부");
+                        $("#maketingStatus").siblings("input").val("거부");
+                        $(".notice_marketing").addClass("disable");
+                    } else {
+                        $("#switchMaketing").attr("disabled", false);
+                        $("#maketingStatus").text("수신");
+                        $("#maketingStatus").siblings("input").val("수신");
+                        $(".notice_marketing").removeClass("disable");
+                    }
+                } else if ($(this).is("#switchMaketing")) {
+                    if($(this).attr( "aria-checked" ) == "true"){
+                        $(".notice_marketing").addClass("disable");
+                    } else {
+                        $(".notice_marketing").removeClass("disable");
+                    }
+                }
+            });
+        });
+        /*  //2021-06-21 추가 */
+    </script>
+    <!-- //2021-06 추가 -->
+</body>
+
+</html>

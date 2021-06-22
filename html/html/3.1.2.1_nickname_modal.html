@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>닉네임 설정</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="n_modal">
+
+                <p class="n_modal_uline">닉네임 설정</p>
+                <div>
+                    <div class="input_txt">
+                        <label for="nickname" class="blind">이메일 주소 입력창</label> <!-- 2021-06 수정 -->
+                        <input type="text" id="nickname" class="line_input input_line text_counter_17" placeholder="닉네임을 입력해주세요." maxlength="10"> <!-- 2021-06 수정 -->
+
+                        <button type="button" class="btn_init"><span class="blind">처음부터 입력하기</span></button><!-- 20210415 추가 --> <!-- 2021-06 수정 -->
+                        <p class="nickname_label"><span class="blind">입력 가능한 글자 수</span><span id="counter">0/17</span></p> <!-- 20210415 텍스트 수정 --> <!-- 2021-06 수정 -->
+                    </div>
+                    <!-- 2021-06 취소버튼 추가 -->
+                    <div class="btn_both_wrap nick_button">
+                        <button type="button" class="b_org_big_wid100 b_cancle">취소</button>
+                        <button type="button" class="b_org_big_wid100 on">확인</button><!-- 비활성화 : on 클래스 제거 -->
+                    </div>
+                    <!-- //2021-06 취소버튼 추가 -->
+                    <script type="text/javascript" src="../js/common2.js"></script>
+                    <!-- 20210415 삭제// 
+                    <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button>
+                     -->
+                </div>
+
+            </div>
+        </div>
+    </div> <!-- 2021-06 수정 -->
+
+</body>
+
+</html>

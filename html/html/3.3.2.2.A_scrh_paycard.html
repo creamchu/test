@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/stickyfill.min.js"></script><!-- 20210323 추가 -->
+    <title>결제내역 조회</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+
+                <header id="sticky1" class="mo show pc_sticky1"><!-- 20210321 클래스 수정 -->
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>결제내역 조회</h2>
+                    </div>
+                </header>
+
+                <section class="settle_search pdlr_0"><!-- 20210524 클래스 수정 -->
+                    <article class="">
+                        <div class="tab pc_sticky2"><!-- 20210321 클래스 수정 -->
+                            <ul>
+                                <li><a href="javascript:;">LG 페이 간편결제 내역</a></li><!-- 20210415 LG 페이 띄어쓰기 수정 -->
+                                <li><a href="javascript:;" class="on">결제수단 별 이용내역</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="month">
+                            <!-- 20210526 추가//-->
+                            <button type="button" class="date_prev"><span class="hidden">이전달</span></button><!-- 비활성화시 disabled 속성추가 -->
+                            <!-- //20210526 추가-->
+                            <!-- 20210526 삭제//
+                            <a href="">
+                                <b><img src="../image/icon_date_pre.png"></b>
+                            </a>
+                            -->
+                            <span>2020년 10월</span>
+                            <!-- 20210526 추가//-->
+                            <button type="button" class="date_next" disabled><span class="hidden">다음달</span></button><!-- 비활성화시 disabled 속성추가 -->
+                            <!-- //20210526 추가 -->
+                            <!-- 20210526 삭제//
+                            <a href="">
+                                <b><img src="../image/icon_date_next.png"></b>
+                            </a>
+                            -->
+                            </div>
+
+                            <div class="settle_amount">
+                                <div>
+                                    <div>
+                                        <div><img src="../image/card_sample.png" alt="신한카드"></div> <!-- 2021-06 수정 -->
+                                        <div>
+                                            <p><em>신한카드 (1234)</em></p>
+                                            <p>신용 · 닉네임000000000000000000</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <p>총 20건</p>
+                                            <p><em>결제금액</em></p>
+                                        </div>
+                                        <div><em>200,400<span>원</span></em></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list6">
+                                <!-- 2021-06 리스트 구조 수정 (링크) -->
+                                <li class="payment_list">
+                                    <a href="javascript:;">
+                                        <div>
+                                            <div><img src="../image/icon_card.png" alt="카드결제"></div> <!-- 2021-06 수정 -->
+                                        </div>
+                                        <div>
+                                            <p>2020.10.10 PM 06:20</p>
+                                            <p><em>스마트월드</em></p> <!-- 2021-06 수정 -->
+                                            <p>LG V50 휴대폰 메탈 케이스 블랙 한정판 휴대폰 메탈 ...</p> <!-- 2021-06 수정 -->
+                                        </div>
+                                        <div>
+                                            <p><em>50,500</em>원</p>
+                                            <p>2개월 할부</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- //2021-06 리스트 구조 수정 (링크) -->
+                                <li class="payment_list">
+                                    <a href="javascript:;">
+                                        <div>
+                                            <!-- 아이콘 이미지
+                                                온라인 : icon_online.png / 오프라인 : icon_offline.png
+                                            -->
+                                            <div><img src="../image/icon_online.png" alt="온라인"></div><!-- 20210415 아이콘이미지 수정 -->
+                                        </div>
+                                        <div>
+                                            <p>2020.10.10 PM 06:20</p>
+                                            <p><em>스마트월드</em></p>
+                                            <p>LG V50 휴대폰 메탈 케이스 블랙 한정판 휴대폰 메탈 ...</p>
+                                        </div>
+                                        <div>
+                                            <p><em>50,500</em>원</p>
+                                            <p class="point1">결제취소</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="payment_list">
+                                    <a href="javascript:;">
+                                        <div>
+                                            <div><img src="../image/icon_offline.png" alt="오프라인"></div><!-- 20210415 아이콘이미지 수정 -->
+                                        </div>
+                                        <div>
+                                            <p>2020.10.10 PM 06:20</p>
+                                            <p><em>스마트월드</em></p>
+                                            <p>LG V50 휴대폰 메탈 케이스 블랙 한정판 휴대폰 메탈 ...</p>
+                                        </div>
+                                        <div>
+                                            <p><em>50,500</em>원</p>
+                                            <p class="">일시불</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="payment_list">
+                                    <a href="javascript:;">
+                                        <div>
+                                            <div><img src="../image/icon_online.png" alt="온라인"></div><!-- 20210415 아이콘이미지 수정 -->
+                                        </div>
+                                        <div>
+                                            <p>2020.10.10 PM 06:20</p>
+                                            <p><em>스마트월드</em></p>
+                                            <p>LG V50 휴대폰 메탈 케이스 블랙 한정판 휴대폰 메탈 ...</p>
+                                        </div>
+                                        <div>
+                                            <p><em>50,500</em>원</p>
+                                            <p class="">일시불</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr>
+                            <!-- <a href="" class="b_used_more">이용내역 더보기</a> -->
+                        </div> <!-- 2021-06 수정 -->
+                    </article>
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+            </div>
+        </div>
+    </div> <!-- 2021-06 수정 -->
+
+</body>
+
+</html>

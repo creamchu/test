@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>이메일 수정</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+
+                <header class="mo show po_retv">
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>이메일 수정</h2>
+                    </div>
+                </header>
+
+                <section class="settle_search">
+                    <article class="">
+                        <!-- 20210526 삭제//
+                        <div class="tit pc_none">이메일 수정</div>
+                        -->
+
+                        <div class="card_input_completed_wrap email_input_mgt">
+                            <label for="email" class="blind">이메일 주소 입력창</label> <!-- 2021-06 추가 -->
+                            <input type="text" id="email" class="input_nickname input_line text_counter" placeholder="이메일을 입력해 주세요." maxlength="100"><!-- 20210416 max-length 추가 --> <!-- 2021-06 수정 -->
+                            <button type="button" class="btn_init"><span class="blind">처음부터 입력하기</span></button><!-- 20210416 추가 --> <!-- 2021-06 수정 -->
+                            <p class="email email_label"><span class="blind">입력 가능한 글자 수</span><span id="counter">100</span></p> <!-- 2021-06 수정 -->
+                        </div>
+
+                        <!-- 20210520 추가// -->
+                        <p class="info_guidetxt">유효한 이메일을 입력해 주세요.</p>
+                        <!-- //20210520 추가 -->
+
+                        <div class="btn_both_wrap">
+                            <input type="button" class="b_org_big_wid100 b_cancle on" value="취소">
+                            <input type="button" class="b_org_big_wid100" value="저장" disabled>
+                            <script type="text/javascript" src="../js/common2.js"></script>
+                        </div>
+                    </article>
+
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+
+            </div>
+        </div>
+    </div> <!-- 2021-06 추가 -->
+
+</body>
+
+</html>

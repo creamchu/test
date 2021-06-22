@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>약관동의</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+
+                <header class="mo show po_retv">
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>이용약관</h2>
+                    </div>
+                </header>
+
+                <section>
+                    <article class="">
+
+                        <div class="tac terms_stit pdt20 pdb60">이용약관 및 동의 항목에 동의해 주세요.</div>
+                        <ul class="list4 icon">
+                            <li class="line">
+                                <div>
+                                    <input type="checkbox" id="myCheck1" class="all">
+                                    <label for="myCheck1" class="check_box"><em>모두 동의합니다.</em></label>
+                                    <!-- 체크박스체크시 border -->
+                                    <!-- 20210415 삭제//
+                                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+                                    <script>
+                                        $(document).ready(function () {
+                                            $('.all').on('click', function () {
+                                                if ($(this).is(':checked')) { $('.line').addClass('on') }
+                                                else { $('.line').removeClass('on') }
+                                            });
+                                        })
+                                    </script>
+                                    -->
+                                </div>
+                            </li>
+                            <!-- 2021-06 내용 전체 수정 -->
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck2" class="each">
+                                    <label for="myCheck2" class="check_box">(필수) LG 페이 은행 계좌 결제 서비스 이용을 위한 개인정보 수집 이용 동의</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck3" class="each">
+                                    <label for="myCheck3" class="check_box">(필수) LG 페이 은행 계좌 결제 서비스 제공을 위한 개인정보 제3자 제공 동의</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck4" class="each">
+                                    <label for="myCheck4" class="check_box">(필수) LG전자 간편결제 서비스 이용약관</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck5" class="each">
+                                    <label for="myCheck5" class="check_box">(필수) 오픈뱅킹공동업무 금융정보조회 약관</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck6" class="each">
+                                    <label for="myCheck6" class="check_box">(필수) 계좌간편결제 서비스 이용을 위한 개인정보 수집 및 이용 동의</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck7" class="each">
+                                    <label for="myCheck7" class="check_box">(필수) 계좌간편결제 서비스 이용을 위한 개인정보 제3자 제공(위탁)</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck8" class="each">
+                                    <label for="myCheck8" class="check_box">(필수) 고유식별정보의 처리에 관한 사용 동의</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck9" class="each">
+                                    <label for="myCheck9" class="check_box">(필수) 본인확인서비스 이용약관</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck10" class="each">
+                                    <label for="myCheck10" class="check_box">(필수) 본인확인서비스 이용을 위한 개인정보 수집, 취급위탁 동의</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="checkbox" id="myCheck11" class="each">
+                                    <label for="myCheck11" class="check_box">(필수) 본인확인서비스 이용을 위한 개인정보제공 동의</label>
+                                    <a href="javascript:;"><img src="../image/icon_terms_arrow.png" alt="약관 상세보기"></a>
+                                </div>
+                            </li>
+                            <!-- //2021-06 내용 전체 수정 -->
+                            <!-- 체크박스 모두 체크 -->
+                            <!-- 20210415 삭제//
+                            <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+                            <script>
+                                $(document).ready(function () {
+                                    $('.all').click(function () {
+                                        $('.each').prop('checked', this.checked);
+                                    });
+                                });
+                            </script>
+                            -->
+                        </ul>
+                    </article>
+                    <input type="button" class="b_org_big_btm wid100" value="다음" disabled>
+                    <script type="text/javascript" src="../js/common2.js"></script>
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

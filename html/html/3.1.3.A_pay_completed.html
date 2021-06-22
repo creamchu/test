@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css">
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <title>결제수단 관리</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+
+                <header class="mo show po_retv">
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>결제수단 관리</h2>
+                    </div>
+                </header>
+
+                <section>
+                    <article class="">
+
+                        <div class="mo_pd_0 change_order"><!-- 20210522 클래스 수정 --> <!-- 2021-06 수정 -->
+                            <button class="b_org">완료</button>
+                        </div>
+                        <ul class="list3" id="columns">
+                            <li class="column" draggable="true">
+                                <div>
+                                    <p>신용카드</p><a href="javascript:;" role="button"><img src="../image/icon_blit_more.png" alt="drag"></a> <!-- 2021-06 수정 -->
+                                </div>
+                                <div>
+                                    <div><img src="../image/card_sample.png" alt="신한 Deep Dream 카드 이미지"></div> <!-- 2021-06 수정 -->
+                                    <div>
+                                        <p>신한 Deep Dream</p>
+                                        <p><span>1234</span><span>드림카드</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="column" draggable="true">
+                                <div>
+                                    <p>은행계좌</p><a href="javascript:;" role="button"><img src="../image/icon_blit_more.png" alt="drag"></a> <!-- 2021-06 수정 -->
+                                </div>
+                                <div>
+                                    <div><img src="../image/bank_sample.png" alt="국민은행 통장 이미지"></div> <!-- 2021-06 수정 -->
+                                    <div>
+                                        <p>국민은행</p>
+                                        <p><span>5678</span><span>닉네임</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="column" draggable="true">
+                                <div>
+                                    <p>휴대폰결제</p><a href="javascript:;" role="button"><img src="../image/icon_blit_more.png" alt="drag"></a><!-- 20210429 휴대폰결제 띄어쓰기 수정 --> <!-- 2021-06 수정 -->
+                                </div>
+                                <div class="mo_pay">
+                                    <div>
+                                        <b><img src="../image/icon_info4.png" alt="안내"></b> <!-- 2021-06 수정 -->
+                                        <p>
+                                            휴대폰번호가 변경되었습니다.<br>
+                                            휴대폰결제 재등록이 필요합니다.
+                                        </p>
+                                    </div>
+                                    <ul>
+                                        <!-- 20210426 순서변경// -->
+                                        <li><a href="javascript:;" role="button">삭제하기</a></li> <!-- 2021-06 수정 -->
+                                        <li><a href="javascript:;" role="button">휴대폰결제 재등록</a></li> <!-- 2021-06 수정 -->
+                                        <!-- 20210426 //순서변경 -->
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <script>
+                            $("#columns").sortable();
+                        </script>
+                        </script>
+                        <a href="javascript:;" class="b_pay_input" role="button">결제수단 등록</a> <!-- 2021-06 수정 -->
+
+                    </article>
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+            </div>
+        </div>
+    </div> <!-- 2021-06 추가 -->
+
+</body>
+
+</html>
