@@ -1981,7 +1981,8 @@ input:checked + .slider:before {
   .modal_box .n_modal>div {padding: 0px;}
 
   .m_hei100 {height:100%;}
-  .modal_box .login_modal {width: calC(100% - 30px) !important; height:100%;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;}
+  .modal_box .login_modal {top:50%;width: calC(100% - 30px) !important; height:auto;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
+  .modal_box .n_modal {top:50%;width: calC(100% - 30px) !important; height:auto;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
 
 
 
