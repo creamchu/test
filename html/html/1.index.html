@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>약관동의</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, target-densitydpi=medium-dpi">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../style/default.css">
+  <script src="../js/jquery-1.8.1.js"></script><!-- 20210415 스크립트 추가 -->
+  <script src="../js/common.js"></script><!-- 20210415 스크립트 추가 -->
+
+
+</head>
+
+<body class="overflow-hidden"><!-- 20210329 팝업 호출시 body에 overflow-hidden 클래스 추가, 팝업닫을 경우 overflow-hidden 클래스 제거) -->
+    <div id="wrapper_main">
+
+        <header class="pc">
+            <div class="navigation">
+                <h1><a href="javascript:;"><img src="../image/logo_pc.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 수정 -->
+                <ul>
+                    <li><a href="javascript:;">LG 페이 소개</a></li>
+                    <li><a href="javascript:;">자주 묻는 질문</a></li>
+                    <li><a href="javascript:;">공지사항</a></li>
+                    <li><a href="javascript:;">LG 페이 설정</a></li>
+                </ul>
+
+                <div class="tnb">
+
+                    <div class="icon">
+                        <a href="javascript:;"><img src="../image/icon_mypage.png" alt="로그인"></a> <!-- 2021-06 수정 -->
+                        <span class="tool-tip">
+                            <i class="arrow"></i>
+                            <a href="javascript:;">로그인</a>
+                        </span>
+                    </div>
+                    <!-- <a href="" class="name"><span><strong>홍길동님</strong></span></a> -->
+                </div>
+
+            </div>
+        </header>
+
+        <!-- <header class="pc">
+            <div class="navigation">
+                <h1><a href="javascript:;"><img src="../image/logo_pc.png"></a></h1>
+                <ul>
+                    <li><a href="javascript:;">LG 페이 소개</a></li>
+                    <li><a href="javascript:;">자주 묻는 질문</a></li>
+                    <li><a href="javascript:;">공지사항</a></li>
+                    <li><a href="javascript:;">LG 페이 설정</a></li>
+                </ul>
+
+                <div class="tnb">
+
+                    <div class="icon2">
+                        <a href="javascript:;"><img src="../image/icon_mypage.png" alt="계정정보"></a>
+                        <span class="tool-tip2">
+                            <i class="arrow2"></i>
+                            <a href="javascript:;" class="line">계정정보</a>
+                            <a href="javascript:;">로그아웃</a>
+                        </span>
+                    </div>
+                    <a href="javascript:;" class="name"><span><strong>홍길동님</strong></span></a>
+                </div>
+
+            </div>
+        </header> -->
+
+        <header class="mobile">
+            <h1 class="logo"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 수정 -->
+
+
+            <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+            <div id="menu-container">
+                <div id="menu-wrapper">
+                    <div id="hamburger-menu"><span></span><span></span><span></span></div>
+                    <!-- hamburger-menu -->
+                </div>
+                <!-- menu-wrapper -->
+                <ul class="menu-list accordion" style="display:none;">
+                    <li id="nav1" class="toggle accordion-toggle">
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" href="javascript:;">Menu1</a>
+                    </li>
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="javascript:;">Submenu1</a></li>
+                        <li><a class="head" href="javascript:;">Submenu2</a></li>
+                        <li><a class="head" href="javascript:;">Submenu3</a></li>
+                    </ul>
+                    <li id="nav2" class="toggle accordion-toggle">
+                        <span class="icon-plus"></span>
+                        <a class="menu-link" href="javascript:;">Menu2</a>
+                    </li>
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="javascript:;">Submenu1</a></li>
+                        <li><a class="head" href="javascript:;">Submenu2</a></li>
+                    </ul>
+
+                </ul>
+                <script>
+                    $(function () {
+                        function slideMenu() {
+                            var activeState = $("#menu-container .menu-list").hasClass("active");
+                            $("#menu-container .menu-list").animate({ left: activeState ? "0%" : "-100%" }, 400);
+                        }
+                        $("#menu-wrapper").click(function (event) {
+                            event.stopPropagation();
+                            $("#hamburger-menu").toggleClass("open");
+                            $("#menu-container .menu-list").toggleClass("active");
+                            slideMenu();
+
+                            $("body").toggleClass("overflow-hidden");
+                        });
+                        
+                        $(".menu-list").find(".accordion-toggle").click(function () {
+                            $(this).next().toggleClass("open").slideToggle("fast");
+                            $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+                            $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
+                            $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
+                        });
+                    });
+                </script>
+            </div>
+
+        </header>
+
+
+        <section class="main_pc">
+            <div class="inner">
+                <b><img src="../image/main_visual.png" alt="카드 이미지"></b><!-- 2021-06 수정 -->
+                <div>
+                    <p>LG 페이로<br>
+                        손쉽게 결제하세요.
+                    </p>
+                    <p>LG 페이에 등록된 카드로 온라인 결제도 OK!<br>
+                        온 · 오프라인 어디서나 빠르게 이용하세요.
+                    </p>
+                    <div>
+                        <a href="javascript:;">자세히 보기 ></a><span></span><a href="javascript:;">LG 페이 시작하기 ></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="main_mobile">
+            <div class="inner">
+                <p>LG 페이로<br>
+                    손쉽게 결제하세요.
+                </p>
+                <p>LG 페이에 등록된 카드로 온라인 결제도 OK!<br>
+                    온 · 오프라인 어디서나 빠르게 이용하세요.
+                </p>
+                <div>
+                    <a href="javascript:;">LG 페이 시작하기 ></a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- footer -->
+    <footer class="footer_pc">
+        <div>
+            <a href="javascript:;">이용약관</a>
+            <span></span>
+            <a href="javascript:;"><strong>개인정보처리방침</strong></a> <!-- 2021-06-01 수정 -->
+        </div>
+        <address>
+            대표이사 : 권봉석, 배두용 | 사업자등록번호 : 107-86-14075 | 통신판매업신고번호 : 제1997-00084호 | 대표번호: 02-3777-1114<br>
+            주소 : 서울시 영등포구 여의대로 128 LG트윈타워 | LG 페이 관련 문의: <a href="tel:1544-8552">1544-8552</a> | Email문의 : <a href="mailto:Privacy-lgpay-kr@lge.com">Privacy-lgpay-kr@lge.com</a> <!-- 2021-06-01 수정 -->
+        </address><!-- 20210415 LG 페이 띄어쓰기 수정 -->
+        <p>Copyright © 2021 LG Electronics. All Rights Reserved.</p>
+    </footer>
+    <!-- //footer -->
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="setting_wrap">
+                <header class="mo show po_retv">
+                    <div class="navigation">
+                        <h1 class="hide"><a href="javascript:;"><img src="../image/logo_m.png" alt="LG Pay Logo"></a></h1> <!-- 2021-06 추가 -->
+                        <a href="javascript:;"><img src="../image/b_pre.png" alt="뒤로가기"></a> <!-- 2021-06 수정 -->
+                        <h2>설정</h2>
+                    </div>
+                </header>
+
+                <section>
+                    <article class="setting">
+                        <div class="tit tal">결제</div><!-- 20210415 클래스 추가 -->
+                        <ul class="list arrow">
+                            <li><a href="javascript:;">결제수단 관리</a></li>
+                            <li><a href="javascript:;">결제내역 조회</a></li>
+                        </ul>
+                    </article>
+
+
+                    <article class="setting">
+                        <div class="tit tal">알림</div>
+                        <ul class="list arrow">
+                            <li><a href="javascript:;">공지사항 및 알림</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="setting">
+                        <div class="tit tal">계정</div>
+                        <ul class="list arrow">
+                            <li><a href="javascript:;"><span>LG 페이 계정정보</span></a></li><!-- 20210415 LG 페이 띄어쓰기 수정 -->
+                        </ul>
+                    </article>
+                </section>
+                <!-- <button onclick="document.getElementById('modal_pop').style.display='none'" type="button" class="close_modal"></button> -->
+
+
+                
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

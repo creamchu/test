@@ -419,7 +419,7 @@ input[disabled] { opacity:.7 }
   font-weight: bold;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
-.tool-tip a {font-size: 16px; color: #666; padding: 5px 20px; display:block;}
+/* 2021-06-28 수정 */ .tool-tip a {font-size: 16px; color: #666; padding: 5px 15px; display:block;text-align:center;}
 
 .tool-tip .arrow {
   position: absolute;
@@ -572,7 +572,7 @@ ul.list2.icon i {position: absolute;left: 28px;top: 50%;width: 38px;text-align: 
 .empty_card a i {padding-bottom: 15px; display: block; text-align: center; }
 .empty_card a i img {width: 26px; height: 26px;}
 
-ul.list3 {clear: both; overflow: hidden;}
+/* 2021-06-28 수정 */ ul.list3 {margin-top:30px;clear: both; overflow: hidden;}
 ul.list3>li {padding:32px;border-radius: 25px; background-color: #fff; margin-bottom:20px;}
 ul.list3>li>* {display: block;}
 ul.list3>li>div:nth-child(1) {position:relative;margin-bottom: 18px;display: flex; flex-flow: row nowrap; justify-content: flex-start;align-items: center;}
@@ -947,7 +947,7 @@ input:checked + .slider:before {
 .modal_box>div .email_input>p {font-size: 20px; margin-bottom: 28px;}
 .modal_box>div .email_input .email_info {color: #eb7047; font-size: 18px; position: relative; text-align: center; display: inline-block; padding-left: 32px; margin-bottom: 40px;}
 .modal_box>div .email_input .email_info::before {content: ''; position: absolute;top:50%;left: 0;transform: translateY(-50%) ;background: url('../image/icon_info.png') no-repeat; width: 23px; height: 23px; background-size: cover;}
-.modal_box>div .email_input .btn_init {position:absolute;right:70px;width:15px;height:15px;background:#ddd url('../image/btn_init.png') no-repeat 0 0 /100%;border-radius:100%; padding:0;} /* 2021-06 padding 추가 */
+/* 2021-06-28 수정 */ .modal_box>div .email_input .btn_init {position:absolute;right:80px;width:15px;height:15px;background:#ddd url('../image/btn_init.png') no-repeat 0 0 /100%;border-radius:100%; padding:0;} /* 2021-06 padding 추가 */
 .modal_box>div .email_input  label.email {right:15px;}
 
 .email_label.email {position:absolute; top:50%; right:30px; transform: translateY(-50%); color: #666;} /* 2021-06 label 수정 */
@@ -1319,6 +1319,12 @@ input:checked + .slider:before {
 .user_id .id_account .account_box .id_amazon:before {background-image:url('../image/account_amazon.png');}
 .user_id .id_account .account_box .id_google:before {background-image:url('../image/account_google.png');}
 .user_id .id_account .account_box .id_apple:before {background-image:url('../image/account_apple.png');}
+
+/* 2021-06-28 추가 */ 
+.change_order {margin-top:50px;padding:0;}
+.change_order:after {content:"";display:block;clear:both;}
+.change_order .b_org {margin:0;}
+
 
 @media all and (max-width:930px){
   /* 2021-06 LG 페이 소개 추가 */
@@ -2080,6 +2086,7 @@ input:checked + .slider:before {
   .lgpayis .lgpayis_list3 .inner {height:320px; background-position:right 0 bottom 0;}
   .lgpayis .lgpayis_list4 .inner {height:320px; background-position:0 0;}
   .lgpayis .lgpayis_list5 .inner {height:244px; background-position:right -80px bottom 0; background-size:auto 70%;}
+  
 }
 
 
@@ -2230,7 +2237,7 @@ input:checked + .slider:before {
   .empty_card a i {padding-bottom: 15px; display: block; text-align: center;}
 
   .pay_manage {padding: 0 24px;}
-  ul.list3 {clear: both; overflow: hidden;}
+  /* 2021-06-28 수정 */ ul.list3 {margin-top:20px;clear: both; overflow: hidden;}
   ul.list3>li {padding:24px;border-radius: 18.75px; background-color: #fff; margin-bottom:15px;}
   ul.list3>li>* {display: block;}
   ul.list3>li>div:nth-child(1) {position: relative;margin-bottom: 13.5px;display: flex; flex-flow: row nowrap; justify-content:space-between;align-items: center;}
@@ -2653,13 +2660,14 @@ input:checked + .slider:before {
 
 
   .openLayerdot {
-    background: url('../image/icon_3dot.png') no-repeat;
+    background: url('../image/icon_3dot.png') no-repeat 50% 50%;
     background-size:auto 12px; /* 2021-06 수정 */
-    width: 2px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    right: 0;
-  }
+    top: -5px;
+    right: -10px;
+  } /* 2021-06-28 수정 */
 
 
 
@@ -2790,6 +2798,8 @@ input:checked + .slider:before {
   .user_id .id_account .account_box .email {font-size:16px;}
   .user_id .id_account .account_box .part {margin-top:10px; margin-left:34px; font-size:16px;}
   .user_id .id_account .account_box .email:before {width:22px; height:22px; margin-right:14px;}
+  
+  /* 2021-06-28 추가 */ .change_order{margin-top:20px;}
 }
 
 
@@ -3349,13 +3359,14 @@ input:checked + .slider:before {
 
 
   .openLayerdot {
-    background: url('../image/icon_3dot.png') no-repeat;
-    background-size: contain;
-    width: 2px;
-    height: 12px;
+    background: url('../image/icon_3dot.png') no-repeat 50% 50%;
+    background-size: auto 12px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    right: 0;
-  }
+    top: -5px;
+    right: -10px;
+  } /* 2021-06-28 수정 */
 
   .mgt80 {margin-top: 40px !important;}
   .mgt160 {margin-top: 80px !important;}
@@ -4202,13 +4213,14 @@ input:checked + .slider:before {
 
 
   .openLayerdot {
-    background: url('../image/icon_3dot.png') no-repeat;
+    background: url('../image/icon_3dot.png') no-repeat 50% 50%;
     background-size:auto 12px; /* 2021-06 수정 */
-    width: 2px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    right: 0;
-  }
+    top: -5px;
+    right: -10px;
+  } /* 2021-06-28 수정 */
 
 
   .mgt80 {margin-top: 40px !important;}
@@ -4308,6 +4320,5 @@ input:checked + .slider:before {
 /* 2021-06 추가 */
 .blind {position:absolute; top:-99999em; left:-99999em; width:0; height:0; font-size:0; line-height:0; text-indent:-99999em; overflow:hidden;}
 .notice_search .list .on p {font-weight:bold;}
-.change_order {padding-right:0;}
 
 
