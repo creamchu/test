@@ -79,6 +79,7 @@ $(function () {
 //카드레이어 말풍선
 $(document).ready(function(){
   $(document).on("click", ".openLayerdot", function(){
+    $('.modal_box .setting_wrap').css({'overflow-y': 'hidden'});
     $(".layer_dot").removeClass("open");
     $(this).siblings(".layer_dot").addClass("open");
     $("#columns").sortable("enable");
@@ -87,8 +88,10 @@ $(document).ready(function(){
 
   $(document).on("click", function(event){
     if ($(event.target).closest(".list3").length === 0){
+      $('.modal_box .setting_wrap').css({'overflow-y': 'auto'});
       $(".layer_dot").removeClass("open");
       $("#columns").sortable("disable");
+      console.log("AA");
     }
     event.stopPropagation();
   });
