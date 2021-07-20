@@ -1111,6 +1111,8 @@ input:checked + .slider:before {
   text-indent:100%; /* 2021-06 추가 */
   white-space:nowrap; /* 2021-06 추가 */
   overflow:hidden; /* 2021-06 추가 */
+  outline: none;
+  -webkit-tap-highlight-color : transparent;
 }
 
 
