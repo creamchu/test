@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../css/slick.css">
     <script type="text/javascript" src="../js/jquery-1.8.1.js"></script>
     <script type="text/javascript" src="../js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <title>결제수단 관리</title> 
 </head>
 
@@ -32,7 +33,7 @@
                             <button class="b_org">순서변경</button>
                         </div>
 
-                        <ul class="list3">
+                        <ul class="list3" id="columns">
                             <li>
                                 <div>
                                     <p>신용카드</p><button class="openLayerdot">옵션 더보기</button><!-- 20210317 버튼에 클래스 추가 --><!-- 20210318 아이디 삭제 --> <!-- 2021-06 수정 -->
@@ -97,6 +98,10 @@
                                 </div>
                             </li>
                         </ul>
+
+                        <script>
+                            $("#columns").sortable();
+                        </script>
                         <a href="javascript:;" role="button" class="b_pay_input">결제수단 등록</a> <!-- 2021-06 수정 -->
                     </article>
                 </section>
