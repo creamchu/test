@@ -545,13 +545,17 @@ section article > div.account_tit {padding-top: 40px;}
 
 .intro {display:table;width:100%;padding: 30px 20px;}
 .intro:after{content:"";display:block;clear:both; right:999999px !important;} /* 2021-06 right 추가 */
-.intro>p:nth-child(1){display:table-cell;}
-.intro>p:nth-child(2) {display:table-cell;position:relative;width:65%;text-align: right; color: #666;word-break:break-all;}
-.intro>p:nth-child(2) b.arrow{top:50%;padding-right:0 !important;transform:translateY(-50%);}
+.intro a{display:table;width:100%;}
+.intro a{display:table;width:100%;}
+.intro p:nth-child(1){display:table-cell;}
+.intro p:nth-child(2) {display:table-cell;position:relative;width:65%;text-align: right; color: #666;word-break:break-all;}
+.intro p:nth-child(2) b.arrow{top:50%;padding-right:0 !important;transform:translateY(-50%);}
 .intro:after {right: 999999px !important;}
 .both {display: flex; flex-flow: row nowrap; align-items: center; position: relative;}
 .both>p {display: inline-block;}
 .both>p:nth-child(2) {position: absolute; right: 0; padding-right: 30px; }
+.intro .both{display:table !important;width:100%;}
+.intro .both p{position:static !important;}
 
 ul.list2>li {border-radius:25px; background-color:#fff; margin-bottom: 20px;}
 ul.list2>li>* {display: block;}
@@ -607,8 +611,8 @@ ul.list3>li>div.mo_pay ul li a {font-size: 20px; display:block; padding:5px 0;} 
 .s_tit {font-size: 18px; text-align: center; padding: 0 0 40px 0; }
 .tit_h2 {padding: 60px 0 70px; font-size: 28px; font-weight: bold;}
 input.input_pw {width:100%; height:64px; text-align:center;font-size: 28px; color: #000;border: 2px solid #ccc; border-radius: 10px; letter-spacing: 3px;}
-input.input_pw::placeholder {color: #666;position:relative;top:12%;}
-input.input_pw:-ms-input-placeholder {color: #666;padding-top:15px;}
+input.input_pw::placeholder {color: #bbb;position:relative;top:12%;font-weight: 300;}
+input.input_pw:-ms-input-placeholder {color: #bbb;padding-top:15px;}
 input.input_pw.on {border: 2px solid #eb7047;}
 
 /* password 별표 너비 조정 */
@@ -617,7 +621,7 @@ input.input_pw.input_line::placeholder {padding-left:20px;}
 input.input_pw.input_line:-ms-input-placeholder {padding-left:20px;}
 
 input.input_email {margin-top:70px;width:100%; height:64px; text-align:left;font-size: 24px; padding: 0 32px; color: #666;border: 2px solid #ccc; border-radius: 10px; background: #e4e4e4;}
-input.input_email::placeholder {color: #666;}
+input.input_email::placeholder {color: #bbb;}
 input.input_email.on {border: 2px solid #eb7047;}
 
 .credit_input {padding: 60px 0 0 0;}
@@ -648,7 +652,7 @@ label.number {position:absolute; top:50%; right:30px; transform: translateY(-50%
 .card_input_logos>ul {display: flex; flex-flow: row wrap; align-items: center; text-align: center;padding: 30px 0px;}
 .card_input_logos>ul li {flex-basis: 33.333%; padding: 15px 0; }
 
-.list4 {display: flex; flex-flow: column nowrap; justify-content: center; align-items: flex-start;}
+.list4 {display: flex; flex-flow: column nowrap; justify-content: center; align-items: flex-start; margin-bottom:15px;}
 .list4 li {width: 100%;padding: 20px 32px; }
 .list4 li>div>label.check_box {position: relative; padding-right:20px;} /* 2021-06 padding-right 추가 */
 .list4 li>div {position: relative;}
@@ -798,17 +802,20 @@ ul.list7 li div:nth-child(3)>p:nth-child(2) a:after {content:''; background: url
 .updown.type2>li>a>p{padding:0;}
 .updown.type2>li>div{margin-top:0;border:20px solid #fff;border-top:0;}
 .updown.type2 .number{float:left;width:10%;color:#666;font-size:18px;}
-.updown.type2 .title{float:left;width:60%;padding-right:20px;color:#000;font-size:20px;}
-.updown.type2 .dates{float:left;width:30%;padding-right:20px;color:#666;font-size:18px;text-align:right;}
+.updown.type2 .title{float:left;width:75%;padding-right:20px;color:#000;font-size:20px;}
+.updown.type2 .dates{float:left;width:25%;padding-right:20px;color:#666;font-size:18px;text-align:right;}
 .notice_wrap{width:100%;max-width:1230px;padding:0 15px;}
 .notice_search{padding-left:0;padding-right:0; padding-top:0;} /* 2021-06 padding-top 추가 */
 .notice_search .input_search{margin-bottom:20px;text-align:right;}
 .notice_search .input_search input{width:100%;max-width:290px;height:auto;padding:13px 25px 13px 17px;background:#fff url(../image/bg_input_search.png) no-repeat 96% 69%;color:#666;font-size:16px;border:2px solid #ccc;border-radius:10px;}
 .notice_search .notice_thead{padding:20px 20px 20px 20px;border-bottom:2px solid #f1f1f1;overflow:hidden;} /* 2021-06 border-top 삭제 */
 .notice_search .notice_thead span{float:left;color:#666;font-size:18px;}
-.notice_search .notice_thead span:nth-child(1){width:10%;}
-.notice_search .notice_thead span:nth-child(2){width:70%;}
-.notice_search .notice_thead span:nth-child(3){width:20%;padding-right:23px;text-align:right;}
+.notice_search .notice_thead span:nth-child(1){width:75%;}
+.notice_search .notice_thead span:nth-child(2){width:25%;padding-right:23px;text-align:right;}
+/* 공지사항 상세 */
+.notice_detail{padding:0 !important;border-top:1px solid #f1f1f1;}
+.notice_detail .updown.type2>li{border-bottom:none;}
+.notice_detail .updown.type2>li>div{display:block !important;border:none;}
 
 .end_svc_wrap {background-color: #fff; padding: 50px 20px;}
 .end_svc_wrap .quest {font-size: 24px; font-weight: bold; text-align: center; padding-bottom: 40px; border-bottom: 1px solid #f1f1f1;}
@@ -825,6 +832,11 @@ ul.list7 li div:nth-child(3)>p:nth-child(2) a:after {content:''; background: url
 /* 2021-06-21 추가 */ .notice_marketing.disable, .notice_marketing.disable li>p {color: #ccc;}
 /* 2021-06-21 추가 */ .notice_marketing.disable .btn_switch {background:#ccc;}
 
+/* 서비스 해지 안내 */
+.end_app_wrap .title {display:block;color:#cf0b35;font-size:20px;text-align:center;line-height:1.8;}
+.end_app_wrap .imgbox {margin-top:22px;padding:40px;background:#fff;text-align:center;border-radius:15px;}
+.end_app_wrap .imgbox img{max-width:100%;}
+.end_app_wrap .list_style {margin-top:16px;font-weight:600;}
 
 .switch {
   position: relative;
@@ -941,7 +953,7 @@ input:checked + .slider:before {
 .modal_box>div .input_txt_email {position: relative;;border-bottom: 1px solid #000; display: flex; justify-content: center; align-items: center; padding:10px 0; margin-bottom: 40px;}
 .modal_box>div .input_txt .line_input{text-align:center;flex-grow:1; font-size: 18px; color: #666;}
 .modal_box>div .input_txt_email .line_input_email {text-align:center;flex-grow:1; font-size: 18px; color: #000;}
-.modal_box>div .input_txt_email .line_input_email::placeholder {color: #666;}
+.modal_box>div .input_txt_email .line_input_email::placeholder {color: #bbb;}
 
 .modal_box>div .email_input {text-align: center;}
 .modal_box>div .email_input>p {font-size: 20px; margin-bottom: 28px;}
@@ -993,7 +1005,7 @@ input:checked + .slider:before {
 
 .email_input_mgt {position:relative;margin-top: 70px;}
 .email_input_mgt input{padding-right:140px;}
-.email_input_mgt .btn_init {position:absolute;top:50%;right:105px;width:25px;height:25px;margin-top:-12px;background:#ddd url('../image/btn_init.png') no-repeat center center; background-size:100%; border-radius:100%;} /* 2021-06 background 수정, background-size 추가 */
+.email_input_mgt .btn_init {display:inline-block;position:absolute;top:50%;right:105px;width:25px;height:25px;margin-top:-12px;padding:0;background:#ddd url('../image/btn_init.png') no-repeat center center; background-size:100%; border-radius:100%;} /* 2021-06 background 수정, background-size 추가 */
 
 
 /* 버튼 활성화 */
@@ -1060,7 +1072,7 @@ input:checked + .slider:before {
 .layer_dot ul {display: flex; flex-flow: column nowrap; }
 .layer_dot ul li:first-child {border-top: 0px;}
 .layer_dot ul li {border-top: 1px solid #f1f1f1;}
-.layer_dot ul li a {display: block; padding: 15px; font-size: 18px; color:#666; }
+.layer_dot ul li a {display: block; padding: 15px; font-size: 20px; color:#666; }
 .layer_dot ul li> a:hover {color:#eb7047}
 .layer_dot ul li:first-child a {color:#eb7047;} /* 2021-06 추가 */
 
@@ -1308,6 +1320,7 @@ input:checked + .slider:before {
 .user_id {height:100%; background:#f1f1f1;}
 .user_id .user_id_tit {padding:86px 0 0; font-size:20px; text-align:center;}
 .user_id .user_id_txt {padding:0 0 30px; margin-top:14px; font-size:18px; text-align:center; line-height:1.7;}
+.user_id .user_id_txt2{margin-top:40px;padding:0 0 30px; font-size:16px; text-align:center; line-height:1.7;}
 .user_id .id_account {padding:36px 0 28px; margin:0 auto 50px; background:#fff; border-radius:20px; text-align:center;}
 .user_id .id_account .account_box {display:inline-block; text-align:left;}
 .user_id .id_account .account_box .email {font-size:20px; font-weight:bold;}
@@ -1459,7 +1472,7 @@ input:checked + .slider:before {
   .menu-list>div h1 {line-height: 0; margin-bottom: 40px;}
   .menu-list>div>div>p {border: 1px solid #efefef; border-radius: 15px; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; margin-right: 25px;}
   .menu-list>div>div {display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: center;}
-  .menu-list>div>div>div>p.email {font-size: 24px; color: #666; padding-top: 10px;}
+  .menu-list>div>div>div>p.email {font-size: 24px; color: #666; padding-top: 10px;word-break:break-all;}
 
 
 
@@ -1541,7 +1554,8 @@ input:checked + .slider:before {
     width: 100%;
   }
   header .navigation h2 {flex-grow: 1; font-size: 28px; text-align: center; font-weight: normal; line-height: 1; border-bottom: 0px !important; padding-bottom: 0px !important;}
-  header .navigation a img {width: 17px; }
+  header .navigation a {position:absolute;left:0;width:40px;height:50px;}
+  header .navigation a img {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 17px; }
 
   section {width: 100%; max-width: 720px; padding: 0 32px;}
   section h2 {display: none; }
@@ -1572,8 +1586,8 @@ input:checked + .slider:before {
   .arrow2 .mo_num b {padding-right: 15px;}
   .arrow2 .phone_notice:before {width:29px; height:29px; margin-right:15px; padding:0;} /* 2021-06 추가 */
   .intro {padding: 30px;}
-  .intro>p:nth-child(1) {}
-  .intro>p:nth-child(2) {text-align: right; color: #666; }
+  .intro p:nth-child(1) {}
+  .intro p:nth-child(2) {text-align: right; color: #666; }
   .intro:after {right: 999999px !important;}
   .both {display: flex; flex-flow: row nowrap; align-items: center; position: relative;}
   .both>p {display: inline-block;}
@@ -1606,8 +1620,8 @@ input:checked + .slider:before {
   ul.list3>li>div:nth-child(1) a img {max-width: 31px;}
   ul.list3>li>div:nth-child(2) {display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: center;}
   ul.list3>li>div:nth-child(2) img {width: 100%; max-width: 232px;}
-  ul.list3>li>div:nth-child(2)>div:nth-child(1) {flex-grow:0; flex-shrink: 1; }
-  ul.list3>li>div:nth-child(2)>div:nth-child(2) {padding-left: 32px; flex-grow: 2; flex-shrink: 0; flex-basis: 80%;}
+  ul.list3>li>div:nth-child(2)>div:nth-child(1) {flex-grow:0; flex-shrink: 5; }
+  ul.list3>li>div:nth-child(2)>div:nth-child(2) {padding-left: 32px; flex-grow: 2; flex-shrink: 1; flex-basis: 80%;}
   ul.list3>li>div:nth-child(2)>div:nth-child(2) p {font-size: 24px; }
   ul.list3>li>div:nth-child(2)>div:nth-child(2) p:nth-child(1) {margin-bottom: 20px;}
   ul.list3>li>div:nth-child(2)>div:nth-child(2) p:nth-child(2) {color: #666;}
@@ -1633,7 +1647,7 @@ input:checked + .slider:before {
   input.input_pw:active {border: 2px solid #eb7047;}
 
   input.input_email {margin-top:70px;width:100%; height:80px; text-align:left;font-size: 24px; padding: 0 32px; color: #666;border: 2px solid #ccc; border-radius: 10px; background: #e4e4e4;}
-  input.input_email::placeholder {color: #666;}
+  input.input_email::placeholder {color: #bbb;}
   input.input_email:active {border: 2px solid #eb7047;}
 
   section.card_input {padding: 0 32px;}
@@ -1839,6 +1853,9 @@ input:checked + .slider:before {
   .notice li>div:nth-child(2) {position:absolute; right: 0; }
   .notice li>p {font-size: 24px; color: #666;}
 
+  /* 서비스 해지 안내 */
+  .end_app_wrap .title {font-size:14px;}
+  
   /* 모바일일때 상하좌우여백 조정 */
   .mo_pd_0{padding: 0 !important;}
 
@@ -2069,8 +2086,10 @@ input:checked + .slider:before {
   .sms .btn_both_wrap button{padding:0;}
 
   /* 2021-06 아이디 보유 안내 추가 */
+  .user_id {padding: 0 16px;}
   .user_id .user_id_tit {padding:60px 0 0; font-size:18px;}
   .user_id .user_id_txt {padding:0 0 28px; margin-top:12px; font-size:16px;}
+  .user_id .user_id_txt2 {padding:0 0 28px; margin-top:30px; font-size:13px;text-align:left;}
   .user_id .id_account {padding:30px 0 24px; margin:0 auto 35px;}
   .user_id .id_account .account_box .email {font-size:18px;}
   .user_id .id_account .account_box .part {margin-top:14px; margin-left:44px; font-size:18px;}
@@ -2144,7 +2163,7 @@ input:checked + .slider:before {
   input.input_pw:active {border: 2px solid #eb7047;}
 
   input.input_email {margin-top:70px;width:100%; height:60px; text-align:left;font-size: 18px; padding: 0 24px; color: #666;border: 2px solid #ccc; border-radius: 10px; background: #e4e4e4;}
-  input.input_email::placeholder {color: #666;}
+  input.input_email::placeholder {color: #bbb;}
   input.input_email:active {border: 2px solid #eb7047;}
 
   section.card_input {padding: 0 24px;}
@@ -2224,8 +2243,8 @@ input:checked + .slider:before {
   .arrow2 .mo_num b {padding-right: 11.25px;}
   .arrow2 .phone_notice:before {width:22px; height:22px; margin-right:12px; padding:0;} /* 2021-06 추가 */
   .intro {padding: 22.5px;}
-  .intro>p:nth-child(1) {}
-  .intro>p:nth-child(2) {text-align: right; color: #666; }
+  .intro p:nth-child(1) {}
+  .intro p:nth-child(2) {text-align: right; color: #666; }
   .intro:after {right: 999999px !important;}
   .both {display: flex; flex-flow: row nowrap; align-items: center; position: relative;}
   .both>p {display: inline-block;}
@@ -2626,14 +2645,14 @@ input:checked + .slider:before {
     border-radius: 5px;
     visibility : hidden;
     padding:0px;
-    max-width: 150px;
+    max-width: 170px;
     width: 100%;
   }
 
   .layer_dot ul {display: flex; flex-flow: column nowrap; }
   .layer_dot ul li:first-child {border-top: 0px;}
   .layer_dot ul li {border-top: 1px solid #f1f1f1;}
-  .layer_dot ul li a {display: block; padding: 9px; font-size: 12px; color:#666; }
+  .layer_dot ul li a {display: block; padding: 9px; font-size: 18px; color:#666; }
   .layer_dot ul li:first-child a {color:#eb7047}
 
   .layer_dot.open {
@@ -2662,11 +2681,11 @@ input:checked + .slider:before {
   .openLayerdot {
     background: url('../image/icon_3dot.png') no-repeat 50% 50%;
     background-size:auto 12px; /* 2021-06 수정 */
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    top: -5px;
-    right: -10px;
+    top: -20px;
+    right: -20px;
   } /* 2021-06-28 수정 */
 
 
@@ -2859,8 +2878,8 @@ input:checked + .slider:before {
   .arrow2 .mo_num b {padding-right: 3.75px;}
   .arrow2 .phone_notice:before {width:15px; height:15px; margin-right:6px; padding:6px 0;} /* 2021-06 추가 */
   .intro {padding: 15px;}
-  .intro>p:nth-child(1) {}
-  .intro>p:nth-child(2) {text-align: right; color: #666; }
+  .intro p:nth-child(1) {}
+  .intro p:nth-child(2) {text-align: right; color: #666; }
   .intro:after {right: 999999px !important;}
   .both {display: flex; flex-flow: row nowrap; align-items: center; position: relative;}
   .both>p {display: inline-block;}
@@ -2961,7 +2980,7 @@ input:checked + .slider:before {
   input.input_pw:active {border: 1px solid #eb7047;}
 
   input.input_email {margin-top:70px;width:100%; height:40px; text-align:left;font-size: 12px; padding: 0 16px; color: #666;border: 1px solid #ccc; border-radius: 10px; background: #e4e4e4;}
-  input.input_email::placeholder {color: #666;}
+  input.input_email::placeholder {color: #bbb;}
   input.input_email:active {border: 1px solid #eb7047;}
 
   section.card_input {padding: 0 16px;}
@@ -2981,7 +3000,7 @@ input:checked + .slider:before {
   label.number {position:absolute; top:50%; right:17.5px; transform: translateY(-50%); color: #666;}
 
   .email_input_mgt input{padding-right:100px;}
-  .email_input_mgt .btn_init{right:80px;width:15px;height:15px;margin-top:-7px;}
+  .email_input_mgt .btn_init{right:80px;width:15px;height:15px;margin-top:-7px;background-size:15px;}
 
   .card_input_logos {border: 1px solid #666; margin-top: 30px; margin-bottom: 45px;}
   .card_input_logos>div:nth-child(1) {font-size: 14px; color: #fff; padding: 7.5px 0; background: #666; text-align: center;}
@@ -3325,14 +3344,14 @@ input:checked + .slider:before {
     border-radius: 5px;
     visibility : hidden;
     padding:0px;
-    max-width: 100px;
+    max-width: 120px;
     width: 100%;
   }
 
   .layer_dot ul {display: flex; flex-flow: column nowrap; }
   .layer_dot ul li:first-child {border-top: 0px;}
   .layer_dot ul li {border-top: 1px solid #f1f1f1;}
-  .layer_dot ul li a {display: block; padding: 7.5px; font-size: 9px; color:#666; }
+  .layer_dot ul li a {display: block; padding: 7.5px; font-size: 12px; color:#666; }
   .layer_dot ul li:first-child a {color:#eb7047}
 
   .layer_dot.open {
@@ -3361,11 +3380,11 @@ input:checked + .slider:before {
   .openLayerdot {
     background: url('../image/icon_3dot.png') no-repeat 50% 50%;
     background-size: auto 12px;
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    top: -5px;
-    right: -10px;
+    top: -15px;
+    right: -15px;
   } /* 2021-06-28 수정 */
 
   .mgt80 {margin-top: 40px !important;}
@@ -3731,8 +3750,8 @@ input:checked + .slider:before {
   .arrow2 .mo_num b {padding-right: 3.75px;}
   .arrow2 .phone_notice:before {width:12px; height:12px; margin-right:4px; padding:6px 0;} /* 2021-06 추가 */
   .intro {padding: 15px;}
-  .intro>p:nth-child(1) {}
-  .intro>p:nth-child(2) {text-align: right; color: #666; }
+  .intro p:nth-child(1) {}
+  .intro p:nth-child(2) {text-align: right; color: #666; }
   .intro:after {right: 999999px !important;}
   .both {display: flex; flex-flow: row nowrap; align-items: center; position: relative;}
   .both>p {display: inline-block;}
@@ -3835,7 +3854,7 @@ input:checked + .slider:before {
   input.input_pw:active {border: 1px solid #eb7047;}
 
   input.input_email {margin-top:70px;width:100%; height:40px; text-align:left;font-size: 12px; padding: 0 16px; color: #666;border: 1px solid #ccc; border-radius: 10px; background: #e4e4e4;}
-  input.input_email::placeholder {color: #666;}
+  input.input_email::placeholder {color: #999;}
   input.input_email:active {border: 1px solid #eb7047;}
 
   section.card_input {padding: 0 16px;}
@@ -4179,14 +4198,14 @@ input:checked + .slider:before {
     border-radius: 5px;
     visibility : hidden;
     padding:0px;
-    max-width: 100px;
+    max-width: 120px;
     width: 100%;
   }
 
   .layer_dot ul {display: flex; flex-flow: column nowrap; }
   .layer_dot ul li:first-child {border-top: 0px;}
   .layer_dot ul li {border-top: 1px solid #f1f1f1;}
-  .layer_dot ul li a {display: block; padding: 7.5px; font-size: 9px; color:#666; }
+  .layer_dot ul li a {display: block; padding: 7.5px; font-size: 12px; color:#666; }
   .layer_dot ul li:first-child a {color:#eb7047}
 
   .layer_dot.open {
@@ -4215,10 +4234,10 @@ input:checked + .slider:before {
   .openLayerdot {
     background: url('../image/icon_3dot.png') no-repeat 50% 50%;
     background-size:auto 12px; /* 2021-06 수정 */
-    width: 20px;
-    height: 20px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    top: -5px;
+    top: -10px;
     right: -10px;
   } /* 2021-06-28 수정 */
 

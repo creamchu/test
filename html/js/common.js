@@ -60,6 +60,13 @@ $(function () {
     $('#counter').html(content.length + '/10');
   });
   $('.text_counter_10').keyup();
+  
+  // 17단위 /* 2021-06-30 추가 */
+  $('.text_counter_17').keyup(function (e) {
+    var content = $(this).val();
+    $('.text_counter_17').siblings('.number').html(content.length + '/17');
+  });
+  $('.text_counter_17').keyup();
 
   // input 초기화
   $("input ~ .btn_init").on("click", function(){
