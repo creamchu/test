@@ -942,7 +942,7 @@ input:checked + .slider:before {
 .modal_box .n_modal {width: 100%; max-width:600px !important; padding: 50px 30px !important;background-color: #fff !important; position: relative; margin: 0 auto;}
 .n_modal_uline {border-bottom: 1px solid #eee; padding-bottom: 30px;}
 
-.modal_box .login_modal {width: 100%; max-width:760px; padding: 50px 30px !important;background-color: #fff !important; position: relative; margin: 0 auto;}
+.modal_box .login_modal {width: 100%; max-width:760px; padding: 50px 30px !important;background-color: #fff !important; position: relative; margin: 0 auto;overflow-y:auto;}
 .modal_box .login_modal .login_modal_uline {padding-bottom: 30px; border-bottom: 1px solid #eee;}
 .m_txt {display: none;}
 
@@ -1319,7 +1319,7 @@ input:checked + .slider:before {
 .faq_wrap .faq_txt p a{color: #eb7650;text-decoration:underline;}
 
 /* 2021-06 아이디 보유 안내 추가 */
-.user_id {height:100%; background:#f1f1f1;}
+.user_id {min-height:calc(100% - 50px); padding-bottom: 30px !important; background:#f1f1f1;}
 .user_id .user_id_tit {padding:86px 0 0; font-size:20px; text-align:center;}
 .user_id .user_id_txt {padding:0 0 30px; margin-top:14px; font-size:18px; text-align:center; line-height:1.7;}
 .user_id .user_id_txt2{margin-top:40px;padding:0 0 30px; font-size:16px; text-align:center; line-height:1.7;}
@@ -1991,7 +1991,7 @@ input:checked + .slider:before {
 
   .m_hei100 {height:100%;}
   /* 2021-06-22 수정 */.modal_box .login_modal {top:50%;width: calC(100% - 30px) !important; height:auto;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
-  /* 2021-06-22 추가 */.modal_box .n_modal {top:50%;width: calC(100% - 30px) !important; height:auto;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
+  /* 2021-06-22 추가 */.modal_box .n_modal {top:50%;width: calC(100% - 30px) !important; height:auto !important;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
 
 
 
@@ -3495,11 +3495,6 @@ input:checked + .slider:before {
 
 
 
-
-
-
-
-
 @media (min-width: 481px) and (max-width: 820px) and (orientation: landscape) {
   .sticky1 {position: sticky; z-index: 99; top:0;  }
   .sticky2 {position: sticky; z-index: 99; top:64px; }
@@ -3800,6 +3795,9 @@ input:checked + .slider:before {
 
   .b_pay_input::before {margin:auto; content: ''; background: url('../image/icon_plus.png') no-repeat;display:inline-block; background-size: cover; margin-right:12.5px; width: 16px; height: 16px; vertical-align: middle;}
   .b_pay_input {color: #666; text-align: center; display: block; padding: 40px 0;}
+
+  
+
 
   .modal_box>div, .modal_box .n_modal {position:relative;width: 100%; padding: 25px 44px !important; background: #fff;}
   .n_modal_uline {border-bottom: 0px;padding-bottom: 0px;}
@@ -4343,3 +4341,10 @@ input:checked + .slider:before {
 .notice_search .list .on p {font-weight:bold;}
 
 
+@media (orientation: landscape) {
+  /* 모달 */
+  .modal_background{position: fixed;top:-1px; left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.9);}
+  .modal_box{position: fixed;top:0;left:0;width:100%;height:100%;padding: 0;transform: none;/* display: flex; justify-content: center;align-items: center; */}
+  .modal_box .login_modal {top:50%;width: calC(100% - 30px) !important; height:auto;padding: 50px 30px 20px !important;background-color: #fff !important; position: relative; margin: 0 auto;transform:translateY(-50%);}
+  .modal_box>div:not(.n_modal), .modal_box>div:not(.modal_box .detail_modal){height: 100%;max-height: 100%;}
+}
