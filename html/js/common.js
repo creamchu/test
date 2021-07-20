@@ -78,14 +78,18 @@ $(function () {
 
 //카드레이어 말풍선
 $(document).ready(function(){
-  $(".openLayerdot").on("click", function(){
+  $(document).on("click", ".openLayerdot", function(){
     $(".layer_dot").removeClass("open");
     $(this).siblings(".layer_dot").addClass("open");
+    //$("#columns").sortable("enable");
+    //$("#columns").sortable();
   });
 
   $(document).on("click", function(event){
     if ($(event.target).siblings(".layer_dot").length === 0){
       $(".layer_dot").removeClass("open");
+      //$("#columns").sortable("disable");
+      console.log("AAA");
     }
     event.stopPropagation();
   });
