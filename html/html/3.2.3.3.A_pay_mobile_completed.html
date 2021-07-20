@@ -34,7 +34,7 @@
                         <!-- 2021-06-30 추가// -->
                         <div class="card_input_completed_wrap">
                             <label class="blind" for="text_counter">닉네임</label>
-                            <input type="text" class="input_nickname text_counter_17" placeholder="닉네임을 설정해주세요. (선택)" maxlength="17" id="text_counter">
+                            <input type="text" class="input_nickname text_counter_17" placeholder="닉네임을 설정해주세요. (선택)" maxlength="17" id="text_counter" oninput="maxLengthCheck(this)"> <!-- 2021-07-21 oninput 이벤트 추가 -->
                             <p class="number">0/17</p>
                         </div>
                         <!-- //2021-06-30 추가 -->
