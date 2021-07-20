@@ -33,7 +33,7 @@
 
                         <div class="input_txt_email mgb10">
                             <label for="email" class="blind">이메일 주소 입력창</label>
-                            <input type="text" id="email" class="line_input_email input_line text_counter" placeholder="이메일 주소를 입력해 주세요." maxlength="100"> <!-- 2021-06 수정 -->
+                            <input type="text" id="email" class="line_input_email input_line text_counter" placeholder="이메일 주소를 입력해 주세요." maxlength="100" oninput="maxLengthCheck(this)"> <!-- 2021-06 수정 -->
                             <button type="button" class="btn_init"><span class="blind">처음부터 입력하기</span></button><!-- 20210415 추가 --> <!-- 2021-06 수정 -->
                             <p class="email email_label"><span class="blind">입력 가능한 글자 수</span><span id="counter">100</span></p> <!-- 2021-06 수정 -->
                         </div>
