@@ -81,15 +81,14 @@ $(document).ready(function(){
   $(document).on("click", ".openLayerdot", function(){
     $(".layer_dot").removeClass("open");
     $(this).siblings(".layer_dot").addClass("open");
-    //$("#columns").sortable("enable");
-    //$("#columns").sortable();
+    $("#columns").sortable("enable");
+    $("#columns").sortable();
   });
 
   $(document).on("click", function(event){
-    if ($(event.target).siblings(".layer_dot").length === 0){
+    if ($(event.target).closest(".list3").length === 0){
       $(".layer_dot").removeClass("open");
-      //$("#columns").sortable("disable");
-      console.log("AAA");
+      $("#columns").sortable("disable");
     }
     event.stopPropagation();
   });
