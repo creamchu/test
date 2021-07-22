@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="../css/default.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/slick.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <title>이름변경</title> 
+</head>
+
+<body>
+
+    <!-- 모달 -->
+    <div id="modal_pop" class="modal_background">
+        <div class="modal_box">
+            <div class="n_modal type_alert">
+                <div>
+                    <div class="txt">
+                        <p>본인인증 후 이름변경이 가능합니다.<br>
+                            변경하시겠습니까?</p>
+                    </div>
+                    <div class="btn_wrap">
+                        <!-- 20210403 클래스 수정// -->
+                        <button type="button" class="btn orange_line" onclick="document.getElementById('modal_pop').style.display='none'">취소</button>
+                        <!-- //20210403 클래스 수정 -->
+                        <button type="button" class="btn" onclick="document.getElementById('modal_pop').style.display='none'">변경</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
